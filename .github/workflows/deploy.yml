@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
   build-and-deploy:
@@ -49,5 +49,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        if: github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v4
